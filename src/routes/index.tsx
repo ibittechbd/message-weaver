@@ -32,7 +32,7 @@ function renderTemplate(template: string, user: MakerUser, industry: Industry) {
           key={i}
           className="rounded-sm bg-highlight px-1 font-semibold text-highlight-foreground"
         >
-          {values[match[1]] ?? part}
+          {values[match[1]!] ?? part}
         </mark>
       );
     }
@@ -41,8 +41,8 @@ function renderTemplate(template: string, user: MakerUser, industry: Industry) {
 }
 
 function Index() {
-  const [userId, setUserId] = useState(USERS[0].id);
-  const [industryId, setIndustryId] = useState(INDUSTRIES[0].id);
+  const [userId, setUserId] = useState(USERS[0]!.id);
+  const [industryId, setIndustryId] = useState(INDUSTRIES[0]!.id);
   const [templateIndex, setTemplateIndex] = useState(0);
   const [template, setTemplate] = useState(TEMPLATES[0]!);
   const [copied, setCopied] = useState(false);
