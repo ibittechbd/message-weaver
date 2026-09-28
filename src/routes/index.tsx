@@ -44,7 +44,7 @@ function Index() {
   const [userId, setUserId] = useState(USERS[0].id);
   const [industryId, setIndustryId] = useState(INDUSTRIES[0].id);
   const [templateIndex, setTemplateIndex] = useState(0);
-  const [template, setTemplate] = useState(TEMPLATES[0]);
+  const [template, setTemplate] = useState(TEMPLATES[0]!);
   const [copied, setCopied] = useState(false);
 
   const user = USERS.find((u) => u.id === userId) ?? USERS[0]!;
@@ -63,7 +63,7 @@ function Index() {
   const handleGenerate = () => {
     const next = (templateIndex + 1) % TEMPLATES.length;
     setTemplateIndex(next);
-    setTemplate(TEMPLATES[next]);
+    setTemplate(TEMPLATES[next]!);
   };
 
   const handleCopy = async () => {
