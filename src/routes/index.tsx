@@ -101,8 +101,8 @@ function Index() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-10">
-        <div className="grid gap-6 lg:grid-cols-[1fr_1fr] xl:gap-8">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:py-8 lg:max-h-none">
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:h-[calc(100dvh-9.5rem)] xl:gap-8">
           {/* Left: controls + editor */}
           <section className="card-lift flex flex-col gap-5 rounded-3xl border border-border/60 bg-card p-5 sm:p-7">
             <div>
