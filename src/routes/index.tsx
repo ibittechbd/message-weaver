@@ -47,8 +47,8 @@ function Index() {
   const [template, setTemplate] = useState(TEMPLATES[0]);
   const [copied, setCopied] = useState(false);
 
-  const user = USERS.find((u) => u.id === userId) ?? USERS[0];
-  const industry = INDUSTRIES.find((i) => i.id === industryId) ?? INDUSTRIES[0];
+  const user = USERS.find((u) => u.id === userId) ?? USERS[0]!;
+  const industry = INDUSTRIES.find((i) => i.id === industryId) ?? INDUSTRIES[0]!;
 
   // The preview re-renders on every keystroke and dropdown change — real time.
   const rendered = useMemo(() => renderTemplate(template, user, industry), [template, user, industry]);
